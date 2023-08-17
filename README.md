@@ -1,6 +1,6 @@
 <img src="https://img.shields.io/badge/C-A8B9CC?style=flat&logo=C&logoColor=white"/> <img src="https://img.shields.io/badge/C++-00599C?style=flat&logo=C++&logoColor=white"/> <img src="https://img.shields.io/badge/OpenGL-5586A4?style=flat&logo=OpenGL&logoColor=white"/>
 # moving_circles
-This repository is about the first assignment of SKKU's 2021 Introduction to Computer Graphics
+This repository is about the first assignment of SKKU's 2021 Introduction to Computer Graphics. Using OpenGL, this project implemented a program to simulate the collision of circles by rendering multiple circles and setting the speed of each.
 ![cg1](https://github.com/dipreez/moving_circles/assets/50349104/70a12924-b41a-4ecd-a388-ff640bf5dbf6)
 
 # Algorithms and data structures
