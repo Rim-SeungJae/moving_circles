@@ -112,7 +112,7 @@ void render()
 		int j = 0;
 		for (auto& c2 : circles)
 		{
-			if (&c1 == &c2)break;
+			if (&c1 == &c2)continue;
 			if (is_collide(c1, c2))
 			{
 				if (collision_graph[i][j] != 0)
@@ -131,8 +131,8 @@ void render()
 						float vi2_x = (c2.velocity.x * dx + c2.velocity.y * dy) / (sqrt(dx * dx + dy * dy));
 						float vf2_y = sqrt((c2.velocity.x * c2.velocity.x + c2.velocity.y * c2.velocity.y) - vi2_x * vi2_x);
 
-						float vf1_x = (c1.radius * c1.radius - c2.radius * c2.radius) * vi1_x / (c1.radius * c1.radius + c2.radius + c2.radius) + 2 * c2.radius * c2.radius * vi2_x / (c1.radius * c1.radius + c2.radius * c2.radius);
-						float vf2_x = (c2.radius * c2.radius - c1.radius * c1.radius) * vi2_x / (c2.radius * c2.radius + c1.radius + c1.radius) + 2 * c1.radius * c1.radius * vi1_x / (c2.radius * c2.radius + c1.radius * c1.radius);
+						float vf1_x = (c1.radius * c1.radius - c2.radius * c2.radius) * vi1_x / (c1.radius * c1.radius + c2.radius * c2.radius) + 2 * c2.radius * c2.radius * vi2_x / (c1.radius * c1.radius + c2.radius * c2.radius);
+						float vf2_x = (c2.radius * c2.radius - c1.radius * c1.radius) * vi2_x / (c2.radius * c2.radius + c1.radius * c1.radius) + 2 * c1.radius * c1.radius * vi1_x / (c2.radius * c2.radius + c1.radius * c1.radius);
 
 						c1.velocity.x = vf1_x * ex + vf1_y * -ey;
 						c1.velocity.y = vf1_x * ey + vf1_y * ex;
